@@ -1,9 +1,4 @@
-{"level":"info","message":"Loading Mongoose functionality"}
-{"level":"info","message":"Starting application"}
-{"level":"info","message":"HTTP Server listening on port: %d, in %s mode"}
-{"level":"info","message":"Mongoose connected to the database"}
-{"level":"info","message":"Creating foo"}
-{"level":"info","message":"Creating foo"}
+{"level":"info","message":"Create a foo"}
 {"level":"info","message":"Loading Mongoose functionality"}
 {"level":"info","message":"Starting application"}
 {"level":"info","message":"HTTP Server listening on port: %d, in %s mode"}
@@ -12,12 +7,10 @@
 {"level":"info","message":"Starting application"}
 {"level":"info","message":"HTTP Server listening on port: %d, in %s mode"}
 {"level":"info","message":"Mongoose connected to the database"}
-{"level":"info","message":"Creating foo"}
 {"level":"info","message":"Loading Mongoose functionality"}
 {"level":"info","message":"Starting application"}
 {"level":"info","message":"HTTP Server listening on port: %d, in %s mode"}
 {"level":"info","message":"Mongoose connected to the database"}
-{"level":"info","message":"Creating foo"}
 {"level":"info","message":"Loading Mongoose functionality"}
 {"level":"info","message":"Starting application"}
 {"level":"info","message":"HTTP Server listening on port: %d, in %s mode"}
@@ -35,3 +28,18 @@
 {"level":"info","message":"Starting application"}
 {"level":"info","message":"HTTP Server listening on port: %d, in %s mode"}
 {"level":"info","message":"Mongoose connected to the database"}
+{"level":"info","message":"Loading Mongoose functionality"}
+{"level":"info","message":"Starting application"}
+{"level":"info","message":"HTTP Server listening on port: %d, in %s mode"}
+{"level":"info","message":"Mongoose connected to the database"}
+{"level":"info","message":"Loading Mongoose functionality"}
+{"level":"info","message":"Starting application"}
+{"level":"info","message":"HTTP Server listening on port: %d, in %s mode"}
+{"level":"info","message":"Mongoose connected to the database"}
+{"level":"error","message":"file not found"}
+{"level":"info","message":"Create a foo"}
+{"level":"info","message":"Loading Mongoose functionality"}
+{"level":"info","message":"Starting application"}
+{"level":"info","message":"HTTP Server listening on port: %d, in %s mode"}
+{"level":"info","message":"Mongoose connected to the database"}
+{"level":"info","message":"Create a foo"}

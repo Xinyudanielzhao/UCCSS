@@ -10,6 +10,7 @@ var bluebird = require('bluebird');
 
 module.exports = function (app, config) {
 
+    console.log(process.env.NODE_ENV )
     logger.log('info', "Loading Mongoose functionality");
     mongoose.Promise = bluebird;
     mongoose.connect(config.db);
