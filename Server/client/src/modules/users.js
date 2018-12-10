@@ -72,8 +72,7 @@ export class Users {
   }
 
 
-  //This back code is from Week 11 Aurelia Users PP Slide 17, connects to editUser.html so that you can click the back button
-  //after adding a user
+
   back() {
     this.showUserEditForm = false;
   }
