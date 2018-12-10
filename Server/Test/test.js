@@ -9,6 +9,7 @@ let should = chai.should();
 
 chai.use(chaiHttp);
 
+
 it('it should GET the index.html file', (done) => {
     chai.request(server)
         .get('/index.html')
@@ -19,13 +20,17 @@ it('it should GET the index.html file', (done) => {
         });
 });
 
+
 it('it should return 404', (done) => {
-    chai.request(server).get('/index2.html')
+    chai.request(server)
+        .get('/index2.html')
         .end((err, res) => {
             res.should.have.status(404);
             done();
         });
 });
+
+
 
 it('it should GET all the users', (done) => {
     chai.request(server)
@@ -42,3 +47,5 @@ it('it should GET all the users', (done) => {
             done();
         });
 });
+
+

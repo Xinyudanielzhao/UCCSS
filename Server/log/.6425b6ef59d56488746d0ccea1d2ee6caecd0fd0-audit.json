@@ -6,74 +6,19 @@
     "auditLog": "log\\.6425b6ef59d56488746d0ccea1d2ee6caecd0fd0-audit.json",
     "files": [
         {
-            "date": 1541376975762,
-            "name": "log\\error-2018-11-04-18.log",
-            "hash": "b805fa6a2b195c8e49316b79edab513b"
+            "date": 1544394108320,
+            "name": "log\\error-2018-12-09-16.log",
+            "hash": "888863ff639880f73c120e30c7dbaec4"
         },
         {
-            "date": 1541379641178,
-            "name": "log\\error-2018-11-04-19.log",
-            "hash": "65444e149752ae014416289edb587453"
+            "date": 1544413591349,
+            "name": "log\\error-2018-12-09-21.log",
+            "hash": "23559ba8025e7e9697f60bfa541f6e87"
         },
         {
-            "date": 1541385378518,
-            "name": "log\\error-2018-11-04-20.log",
-            "hash": "8bfb360e298cb00906252a3c121f3a25"
-        },
-        {
-            "date": 1541394995803,
-            "name": "log\\error-2018-11-04-23.log",
-            "hash": "d4173bfe9ffc4dd48de71aed6f1714da"
-        },
-        {
-            "date": 1541400157066,
-            "name": "log\\error-2018-11-05-00.log",
-            "hash": "a9847c7d82b846ee47200a15bfff9117"
-        },
-        {
-            "date": 1541401422581,
-            "name": "log\\error-2018-11-05-01.log",
-            "hash": "0075bf151b8bcef5f05cef963a146bda"
-        },
-        {
-            "date": 1541404902917,
-            "name": "log\\error-2018-11-05-02.log",
-            "hash": "836b06205e7a0caddb1c4bd9f4f9c25c"
-        },
-        {
-            "date": 1541434779337,
-            "name": "log\\error-2018-11-05-10.log",
-            "hash": "761576835634b5513e49d2c806629ffd"
-        },
-        {
-            "date": 1541438639372,
-            "name": "log\\error-2018-11-05-11.log",
-            "hash": "f93ec811595601b05a1efe67f511769c"
-        },
-        {
-            "date": 1541444589211,
-            "name": "log\\error-2018-11-05-13.log",
-            "hash": "544270035bb6076d22f63d291b9011f1"
-        },
-        {
-            "date": 1541448837471,
-            "name": "log\\error-2018-11-05-14.log",
-            "hash": "328d9f398a07d35276b644ecde63fda0"
-        },
-        {
-            "date": 1541452720827,
-            "name": "log\\error-2018-11-05-15.log",
-            "hash": "040aa85ea993323f99c0898f5ae3dff2"
-        },
-        {
-            "date": 1541457929562,
-            "name": "log\\error-2018-11-05-16.log",
-            "hash": "bc8e60c78b952d11d5099776f47b0ce6"
-        },
-        {
-            "date": 1541462273097,
-            "name": "log\\error-2018-11-05-17.log",
-            "hash": "fae41622585a7a9f937a3841fdf9e43e"
+            "date": 1544463371139,
+            "name": "log\\error-2018-12-10-11.log",
+            "hash": "ba8aeebabbf608944a4209682a2e1f25"
         }
     ]
 }

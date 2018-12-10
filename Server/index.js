@@ -3,7 +3,7 @@ var config = require('./config/config');
 var logger = require('./config/logger');
 
 var app = express();
-
+var port = process.env.port || 5000;
 
 require('./config/express')(app, config);
 
