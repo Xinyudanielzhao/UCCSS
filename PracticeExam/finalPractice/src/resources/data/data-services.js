@@ -8,7 +8,7 @@ export class DataServices {
     constructor(http) {
 
         this.httpClient = http;
-        this.BASE_URL = "http://git.ucc.uwm.edu";   
+        this.BASE_URL = "http://git.ucc.uwm.edu/";   
 
         this.httpClient.configure(config => {
             config
