@@ -5,7 +5,7 @@ import { DataServices } from './data-services';
 export class HelpTicket {
     constructor(data) {
         this.data = data;
-        this.HELP_TICKET_SERVICE = 'helpTickets';    // THIS PART DOES THE "/HELPTICKET" IN THE URL
+        this.HELP_TICKET_SERVICE = 'helpTickets';    
         this.HELP_TICKETCONTENT_SERVICE = 'helpTicketContents';
     }
 
