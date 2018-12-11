@@ -350,7 +350,7 @@ define('modules/home',["exports", "aurelia-framework"], function (_exports, _aur
   /*#__PURE__*/
   function () {
     function Home() {
-      this.message = 'Home is where the heart is :)';
+      this.message = 'Home';
     }
 
     var _proto = Home.prototype;
