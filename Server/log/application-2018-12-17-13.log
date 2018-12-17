@@ -18,3 +18,11 @@
 {"level":"info","message":"Starting application"}
 {"level":"info","message":"HTTP Server listening on port: %d, in %s mode"}
 {"level":"info","message":"Mongoose connected to the database"}
+{"level":"error","message":"File not found"}
+{"level":"info","message":"Get all users"}
+{"level":"info","message":"Get all HelpTickets"}
+{"level":"info","message":"Getting a HelpTickets Content"}
+{"level":"info","message":"Updating HelpTicket"}
+{"level":"info","message":"Uploading files"}
+{"level":"info","message":"Get all HelpTickets"}
+{"level":"info","message":"Getting a HelpTickets Content"}
