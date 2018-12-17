@@ -4,14 +4,14 @@ var logger = require('./logger');
 var bodyParser = require('body-parser');
 var glob = require('glob');
 
-var mongoose = require('mongoose');  //ADDED FROM 'FIRST STEPS WITH MONGOOSE' PP, SLIDE 22
+var mongoose = require('mongoose');  
 var bluebird = require('bluebird');
 
-var cors = require('cors');  //added from week 10 aurelia data layer slide 19
+var cors = require('cors');  
 
 module.exports = function (app, config) {
 
-  //ADDED FROM 'FIRST STEPS WITH MONGOOSE' PP, SLIDE 22
+  
   logger.log('info', "Loading Mongoose functionality");
   mongoose.Promise = bluebird;
   mongoose.connect(config.db);
@@ -21,23 +21,9 @@ module.exports = function (app, config) {
   });
 
 
-  app.use(cors({ origin: 'http://localhost:9000' }));  //added from week 10 aurelia data layer slide 19
-  //The CORS code above from week 10 allows user to go and request from different browsers
+  app.use(cors({ origin: 'http://localhost:9000' }));  
 
 
-
-
-
-  // app.use(function (req, res, next) {
-  //   logger.log('info', 'Request from ' + req.connection.remoteAddress);
-  //   next();
-  // });
-  // app.use(morgan('dev'));
-
-
-
-  //THIS CODE BELOW IS THE SAME AS THE ONE ABOVE, WE ARE JUST ADDING THE IF STATEMENT SO THAT
-  //THE SYSTEM DOES NOT LOG TO CONSOLE WHEN IN TESTING ENVIRONMENT
   if (process.env.NODE_ENV !== 'test') {
     app.use(morgan('dev'));
 
@@ -63,49 +49,16 @@ module.exports = function (app, config) {
 
   app.use(express.static(config.root + '/public'));
 
-
-  //This portion of code makes it so it gets called before the data is returned back to users in the next block
-  //of code
-
-  // var users = [{ name: 'John', email: 'woo@hoo.com' },
-  // { name: 'Betty', email: 'loo@woo.com' },
-  // { name: 'Hal', email: 'boo@woo.com' }
-  // ];
-
-  // app.get('/api/users', function (req, res) {
-  //   res.status(200).json(users);
-  // });
-
-
-
-  //THIS BLOCK OF CODE IS REPLACED WITH THE CODE BELOW IT WHERE THE VAR MODELS AND CONTROLLERS ARE REQUIRED USING GLOB 
-  // require('../app/models/users');
-  // require('../app/controllers/users')(app, config);
-
-
-
-  // require('../app/models/users'); < THIS CODE IS REPLACED WITH THE ONE BELOW USING GLOB
-  //FIRST STEPS WITH MONGOOSE SLIDE 24
   var models = glob.sync(config.root + '/app/models/*.js');
   models.forEach(function (model) {
     require(model);
   });
 
-  // require('../app/controllers/users')(app, config); < THIS IS REPLACED WITH THE ONE BELOW USING GLOB
-  //FIRST STEPS WITH MONGOOSE SLIDE 24
   var controllers = glob.sync(config.root + '/app/controllers/*.js');
   controllers.forEach(function (controller) {
     require(controller)(app, config);
   });
 
-
-
-
-
-
-
-
-  //From Express routing PP, slide 5
   app.get('/willwork',
     function (req, res, next) {
       res.set('X-One', 'One');
@@ -121,11 +74,6 @@ module.exports = function (app, config) {
   );
 
 
-
-
-
-
-
   app.use(function (req, res) {
     logger.log('error', 'File not found');
     res.type('text/plan');
@@ -133,12 +81,6 @@ module.exports = function (app, config) {
     res.send('404 Not Found');
   });
 
-  // app.use(function (err, req, res, next) {
-  //   console.error(err.stack);
-  //   res.type('text/plan');
-  //   res.status(500);
-  //   res.send('500 Sever Error');
-  // });
 
   app.use(function (err, req, res, next) {
     console.log(err);

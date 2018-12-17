@@ -3,52 +3,55 @@ import { DataServices } from './data-services';
 @inject(DataServices)
 
 export class HelpTicket {
-    constructor(data) {
-        this.data = data;
-        this.HELP_TICKET_SERVICE = 'helpTickets';    
-        this.HELP_TICKETCONTENT_SERVICE = 'helpTicketContents';
+  constructor(data) {
+    this.data = data;
+    this.HELP_TICKET_SERVICE = 'helpTickets';
+    this.HELP_TICKET_CONTENT_SERVICE = 'helpTicketContents';
+  }
+
+  async getHelpTickets(userObj) {
+    let url = this.HELP_TICKET_SERVICE;
+    // eslint-disable-next-line eqeqeq
+    if (userObj.role == 'user') {
+      url += '/user/' + userObj._id;
     }
-
-    async getHelpTickets(userObj) {
-        let url = this.HELP_TICKET_SERVICE;
-        let response = await this.data.get(url);
-        if (!response.error) {
-            this.helpTicketsArray = response;
-        } else {
-            this.helpTicketsArray = [];
-        }
+    let response = await this.data.get(url);
+    if (!response.error) {
+      this.helpTicketsArray = response;
+    } else {
+      this.helpTicketsArray = [];
     }
+  }
 
-    async getHelpTicketsContents(id) {
-        let url = this.HELP_TICKETCONTENT_SERVICE + "/helpTicket/" + id;
-        let response = await this.data.get(url);
-        if (!response.error) {
-            this.helpTicketsContentArray = response;
-        } else {
-            this.helpTicketsContentArray = [];
-        }
+  async getHelpTicketsContents(id) {
+    let url = this.HELP_TICKET_CONTENT_SERVICE + '/helpTicket/' + id;
+    // eslint-disable-next-line eqeqeq
+    let response = await this.data.get(url);
+    if (!response.error) {
+      this.helpTicketsContentsArray = response;
+    } else {
+      this.helpTicketsContentsArray = [];
     }
+  }
 
-    async saveHelpTicket(helpTicket) {
-        let serverResponse;
-        if (helpTicket) {
-            if (helpTicket.helpTicket._id) {
-                serverResponse = await this.data.put(helpTicket, this.HELP_TICKET_SERVICE);
-            } else {
-                serverResponse = await this.data.post(helpTicket, this.HELP_TICKET_SERVICE);
-            }
-            return serverResponse;
-        }
+  async saveHelpTicket(helpTicket) {
+    let serverResponse;
+    if (helpTicket) {
+      if (helpTicket.helpTicket._id) {
+        serverResponse = await this.data.put(helpTicket, this.HELP_TICKET_SERVICE);
+      } else {
+        serverResponse = await this.data.post(helpTicket, this.HELP_TICKET_SERVICE);
+      }
+      return serverResponse;
     }
-    async delete(helpTicket) {
-        if (helpTicket && helpTicket._id) {
-            await this.data.delete(this.HELP_TICKET_SERVICE + '/' + helpTicket._id)
-        }
+  }
+  async delete(helpTicket) {
+    if (helpTicket && helpTicket._id) {
+      await this.data.delete(this.HELP_TICKET_SERVICE + '/' + helpTicket._id);
     }
+  }
 
-        async uploadFile(files, id) {
-            await this.data.uploadFiles(files, this.HELP_TICKETCONTENT_SERVICE + "/upload/" + id);
-
-        }
-
+  async uploadFile(files, id) {
+    await this.data.uploadFiles(files, this.HELP_TICKET_CONTENT_SERVICE + '/upload/' + id);
+  }
 }
